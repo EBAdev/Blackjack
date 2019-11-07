@@ -1,4 +1,4 @@
-String [] kuloer =new String[4];
+String [] kuloer = new String[4];
 String [] vaerdi = new String[13];
 StringList Kort = new StringList();
 StringList KortVaerdi = new StringList();
