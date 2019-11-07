@@ -18,4 +18,7 @@ void SpillerTraek() {
     }
   }
   BrugerPoint = BrugerPoint + Traek;
+  if (Startet && !FirstTurn) {
+    Starttext=false;
+  }
 }
