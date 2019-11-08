@@ -11,6 +11,8 @@ Boolean Startet = false;
 Boolean DealerTurn = false;
 Boolean SpillerTabt = false;
 Boolean DealerTabt = false;
+Boolean SpillerOvertrukket = false;
+
 boolean afsloering;
 
 import controlP5.*;
@@ -30,7 +32,7 @@ void setup() {
 
 void draw() {
   if (BrugerPoint > 21) {
-    SpillerTabt = true;
+    SpillerOvertrukket = true;
   } else if (DealerVaerdi > 21) {
     DealerTabt = true;
   }
@@ -64,9 +66,9 @@ void Afsloer_dealer_kort() {
   cp5session3.hide();
   cp5session4.show();
 }
-void Sejt(){
- afsloering = false;
- Afslut_spil(); 
+void Sejt() {
+  afsloering = false;
+  Afslut_spil(); 
   cp5session1.hide();
   cp5session2.hide();
   cp5session3.hide();
