@@ -69,8 +69,14 @@ void GUI_Draw() {
     textFont(Font2);
     text("Du har lige nu: " + BrugerPoint + " point", width/2, height/2-100);
     text("Dealeren har lige nu: " + DealerVaerdi + " point", width/2, height/2+100);
+  } if (SpillerOvertrukket){
+    textFont(Font3);
+    fill(200,0,0);
+    text("Du kom over 21, desværre :( ", width/2, height/2-50);
+    text("Bedre held næste gang!", width/2, height/2+50);
+    noLoop();
+    
   }
-
 
   if (SpillerTabt) {
     background(0);
@@ -80,7 +86,7 @@ void GUI_Draw() {
 
     fill(255, 0, 0);
     textFont(Font3);
-    text("Du tabte, desværre :(", width/2, height/2-100);
+    text("Du tabte, desværre :(, Dealeren var tætterre på 21", width/2, height/2-100);
     text("Bedre held næste gang!", width/2, height/2+100);
     if (counter > 0) {
       fill(0);
